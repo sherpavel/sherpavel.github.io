@@ -1,12 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SherPavel</title>
-</head>
-<body>
     
-</body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./resources/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="./resources/favicon.ico">
+    <title></title>
+    <meta name="description" content="Portfolio">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/projects.css">
+    <link rel="stylesheet" href="style/mobile.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./scripts/projects.js"></script>
+    <script src="./scripts/showcase.js"></script>
+    <script src="./scripts/index.js"></script>
+  </head>
+  <body>
+
+    <section id="front">
+      <video autoplay muted loop id="bgVideo">
+        <source src="./resources/background.mp4" type="video/mp4">
+      </video>
+
+      <div id="name">
+        <h1>Pavel Sherstyuk</h1>
+        <p>
+          Software/Web developer<br>
+          UI Designer
+        </p>
+      </div>
+      <section id="contact">
+        <a href="https://www.linkedin.com/in/sherpavel/" target="_blank" class="link" id="linkedin">
+          <img src="./resources/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/sherpavel" target="_blank" class="link" id="github">
+          <img src="./resources/github.png" alt="GitHub">
+        </a>
+        <a class="link" href="mailto:sher00pavel@gmail.com" target="_blank">
+          <img src="./resources/mail.png" alt="eMail">
+        </a>
+      </section>
+
+      <div id="arrow">
+        <div class="arrow">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+        <div class="arrow">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h1>Current projects</h1>
+      <div id="showcase"></div>
+    </section>
+
+    <section id="main">
+
+      <section class="text">
+
+      </section>
+    </section>
+
+    <footer>
+      <!-- <hr> -->
+      Created by Pavel Sherstyuk
+    </footer>
+
+  </body>
 </html>

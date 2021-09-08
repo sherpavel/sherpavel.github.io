@@ -1,0 +1,208 @@
+:root {
+    --black-color: rgb(20, 20, 20); 
+    --dark-color: rgb(38, 38, 43);
+    --hint-color: rgb(128, 128, 128);
+    --mid-color: rgb(180, 180, 180);
+    --bright-color: rgb(230, 230, 230);
+
+    /* --comp-dark-color: #2b2b26; */
+    --mono-dark-color: #2f2f45;
+
+    --radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: var(--bright-color);
+    background-color: var(--dark-color);
+    margin: 0;
+    overflow: auto;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    position: relative;
+    width: 80vw;
+    left: 10vw;
+    top: -21px;
+    padding-top: 20px;
+    box-shadow: inset 0 0 10px 0 var(--black-color);
+}
+
+#front {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+#front #bgVideo {
+    position: absolute;
+    min-width: 100%;
+    z-index: -10;
+    overflow: hidden;
+}
+#name {
+    position: relative;
+    top: 5vw;
+    left: 5vw;
+    width: 60vw;
+    height: 34vh;
+}
+#name h1 {
+    margin: 0;
+    font-size: 80px;
+    color: white;
+}
+#name p {
+    /* position: absolute;
+    bottom: 0; */
+    margin: 0;
+    padding: 1em 0 0 0;
+    font-size: 30px;
+}
+
+#contact {
+    position: absolute;
+    top: 5vw;
+    right: 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 30px;
+    margin: 0;
+}
+#contact > a {
+    align-self: center;
+    display: inline-block;
+    width: 6vh;
+    height: 6vh;
+    flex: 0 0 6vh;
+    margin: 0;
+    padding: 15px;
+    border-radius: var(--radius);
+    box-shadow: inset 2px 2px 8px 0px var(--mono-dark-color);
+    background-color: rgba(38, 38, 43, 0.2);
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+#contact > a > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #contact > a:hover {
+        box-shadow: none;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    #contact > a:hover > img {
+        opacity: 1;
+    }
+}
+
+/* Front page arrow */
+#arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+#arrow > :first-child {
+    transform: translateY(20px);
+}
+#arrow > :last-child {
+    transform: translateY(-20px);
+}
+#arrow .arrow {
+    height: 70px;
+    position: relative;
+}
+#arrow .arrow > div {
+    top: 15px;
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 10px;
+    background-color: var(--mid-color);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+#arrow .arrow > .left {
+    transform: translateX(6px) rotate(0);
+}
+#arrow .arrow > .right {
+    transform: translateX(-6px) rotate(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #arrow:hover .left {
+        transform: translateX(12px) rotate(30deg);
+    }
+    #arrow:hover .right {
+        transform: translateX(-12px) rotate(-30deg);
+    }
+}
+
+
+/* For text */
+.hint {
+    font-size: inherit;
+    color: var(--hint-color);
+}
+
+a.link {
+    font-size: 28px;
+    color: var(--dark-color);
+    background-color: var(--bright-color);
+    text-decoration: none;
+    margin: 0em 1em 0em 1em;
+    padding: 0.2em;
+    padding-top: 0.1em;
+    transition: all 0.2s;
+}
+a.link:hover {
+    color: hsl(180, 80%, 80%);
+    background-color: rgba(0, 0, 0, 0);;
+    text-decoration: underline;
+}
+a.inline {
+    font-size: inherit;
+    margin: 0;
+    padding: auto;
+    border-radius: 5px;
+}
+
+footer {
+    position: relative;
+    margin-top: 0em;
+    padding: 1em;
+    bottom: 0;
+    right: 0;
+    font-size: 18px;
+    text-align: right;
+    color: var(--mid-color);
+}
+hr {
+    width: 100%;
+    height: 5px;
+    background-color: var(--secondary-color);
+    border: none;
+    margin: 0;
+}
