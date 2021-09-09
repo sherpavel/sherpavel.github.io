@@ -13,18 +13,18 @@ class ShowcaseItem {
         this.JItem.append(this.JSlide);
 
         this.open = false;
+        this.lastOpen = 0;
 
         // Event listeners
-        this.JItem.mouseover(() => this.show());
-        this.JItem.mouseout(() => this.hide());
+        this.JItem.mouseenter(() => this.show());
+        this.JItem.mouseleave(() => this.hide());
         this.JItem.on("click", () => this.click());
-
         this.clickListeners = [];
-
     }
 
     show() {
         this.open = true;
+        this.lastOpen = Date.now();
         this.JSlide.css({
             "top": (isMobile) ? "-28vh" : "-28vh"
         });
@@ -32,20 +32,19 @@ class ShowcaseItem {
 
     hide() {
         this.open = false;
+        this.lastOpen = 0;
         this.JSlide.css({
             "top": "5%"
         });
     }
 
     click() {
-        if (this.open) {
-            if (this.item.link) 
+        if (this.open && Date.now() - this.lastOpen > 200) {
+            if (this.item.link)
                 window.open(this.item.link, '_blank').focus();
-        } else {
-            this.show();
-            this.clickListeners.forEach(listener => {
-                listener();
-            });
         }
+        this.clickListeners.forEach(listener => {
+            listener();
+        });
     }
 }
