@@ -30,25 +30,37 @@ body {
     -ms-user-select: none;
 
     position: relative;
-    width: 80vw;
-    left: 10vw;
+    max-width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
     top: -21px;
     padding-top: 20px;
-    box-shadow: inset 0 0 10px 0 var(--black-color);
+    box-shadow: 0 0 20px -5px var(--dark-color);
+    background-color: var(--bright-color);
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -20;
+}
+.bgVideo {
+    position: absolute;
+    min-width: 100%;
+    z-index: -10;
+    overflow: hidden;
 }
 
 #front {
     position: relative;
     width: 100%;
     height: 100vh;
-
     overflow: hidden;
+    background-color: transparent;
 }
-#front #bgVideo {
-    position: absolute;
-    min-width: 100%;
-    z-index: -10;
-    overflow: hidden;
+#front > .background {
+    background-color: var(--dark-color);
 }
 #name {
     position: relative;
@@ -63,8 +75,6 @@ body {
     color: white;
 }
 #name p {
-    /* position: absolute;
-    bottom: 0; */
     margin: 0;
     padding: 1em 0 0 0;
     font-size: 30px;
@@ -158,6 +168,27 @@ body {
     #arrow:hover .right {
         transform: translateX(91.5%) rotate(-30deg);
     }
+}
+
+/* Main */
+#main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+#main > .background {
+    background: linear-gradient(#e7ccbd, var(--bright-color));
+    /* background-color: var(--bright-color); */
+}
+#main > h1 {
+    position: relative;
+    top: 220px;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    padding: 0;
+    margin: 0;
 }
 
 

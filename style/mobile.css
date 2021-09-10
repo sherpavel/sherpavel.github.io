@@ -1,19 +1,23 @@
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     body {
         width: 100%;
         left: 0;
         box-shadow: none;
+        left: 0;
+        transform: none;
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     body {
         width: 100%;
         left: 0;
         box-shadow: none;
+        left: 0;
+        transform: none;
     }
 
-    #front #bgVideo {
+    .bgVideo {
         position: absolute;
         width: auto;
         height: 80%;
@@ -62,6 +66,14 @@
     }
     #showcase > .item > .slide > p {
         font-size: 16px;
+    }
+
+    #main > .bgVideo {
+        height: 50%;
+    }
+    #main > h1 {
+        top: 160px;
+        font-size: 60px;
     }
 
     footer {
