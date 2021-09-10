@@ -45,12 +45,6 @@ body {
     height: 100%;
     z-index: -20;
 }
-.bgVideo {
-    position: absolute;
-    min-width: 100%;
-    z-index: -10;
-    overflow: hidden;
-}
 
 #front {
     position: relative;
@@ -59,14 +53,20 @@ body {
     overflow: hidden;
     background-color: transparent;
 }
+#front > .bgVideo {
+    position: absolute;
+    min-width: 100%;
+    z-index: -10;
+    overflow: hidden;
+}
 #front > .background {
     background-color: var(--dark-color);
 }
 #name {
     position: relative;
-    top: 5vw;
-    left: 5vw;
-    width: 60vw;
+    top: 30pt;
+    left: 30pt;
+    width: 70%;
     height: 34vh;
 }
 #name h1 {
@@ -82,8 +82,8 @@ body {
 
 #contact {
     position: absolute;
-    top: 5vw;
-    right: 5vw;
+    top: 30pt;
+    right: 30pt;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -129,7 +129,7 @@ body {
 /* Front page arrow */
 #arrow {
     position: absolute;
-    width: 40vmin;
+    width: 20vw;
     height: 20%;
     bottom: 1vh;
     left: 50%;
@@ -155,10 +155,10 @@ body {
     transition: all 0.3s;
 }
 #arrow .arrow > .left {
-    transform: translateX(2%) rotate(0deg);
+    transform: translateX(3%) rotate(0deg);
 }
 #arrow .arrow > .right {
-    transform: translateX(98%) rotate(0deg);
+    transform: translateX(97%) rotate(0deg);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -174,17 +174,23 @@ body {
 #main {
     position: relative;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
 }
 #main > .background {
     background: linear-gradient(#e7ccbd, var(--bright-color));
     /* background-color: var(--bright-color); */
 }
-#main > h1 {
+#main > .bgVideo {
     position: relative;
-    top: 220px;
-    text-align: center;
+    min-width: 100%;
+    z-index: -10;
+}
+#main > h1 {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 80px;
     color: white;
     padding: 0;
