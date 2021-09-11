@@ -43,9 +43,9 @@
         row-gap: 0.5em;
     }
     #contact > a {
-        width: 5vh;
-        height: 5vh;
-        flex: 0 0 5vh;
+        width: 5vmax;
+        height: 5vmax;
+        flex: 0 0 5vmax;
         padding: 10px;
         box-shadow: none;
     }

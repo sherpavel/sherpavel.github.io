@@ -4,7 +4,7 @@ class ShowcaseItem {
 
         // jquery Slide
         this.JSlide = $("<div>").addClass("slide");
-        this.JSlide.append(`<div><img src="./resources/${item.img}.png" alt="Gradient"><h2>${item.name}</h2></div>`);
+        this.JSlide.append(`<div><img src="./resources/${item.img}" alt=" "><h2>${item.name}</h2></div>`);
         let text = $(`<p>${item.text}${(item.link) ? `<br><span class="hint">(Click to open)</span>` : ``}</p>`);
         this.JSlide.append(text);
 

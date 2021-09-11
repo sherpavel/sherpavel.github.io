@@ -94,9 +94,9 @@ body {
 #contact > a {
     align-self: center;
     display: inline-block;
-    width: 6vh;
-    height: 6vh;
-    flex: 0 0 6vh;
+    width: 6vmin;
+    height: 6vmin;
+    flex: 0 0 6vmin;
     margin: 0;
     padding: 15px;
     border-radius: var(--radius);
@@ -149,24 +149,24 @@ body {
     position: absolute;
     display: inline-block;
     width: 50%;
-    height: 1vh;
+    height: 1vmin;
     border-radius: 10vmax;
     background-color: var(--mid-color);
     transition: all 0.3s;
 }
 #arrow .arrow > .left {
-    transform: translateX(3%) rotate(0deg);
+    transform: translateX(4%) rotate(0deg);
 }
 #arrow .arrow > .right {
-    transform: translateX(97%) rotate(0deg);
+    transform: translateX(96%) rotate(0deg);
 }
 
 @media (hover: hover) and (pointer: fine) {
     #arrow:hover .left {
-        transform: translateX(8.5%) rotate(30deg);
+        transform: translateX(9%) rotate(30deg);
     }
     #arrow:hover .right {
-        transform: translateX(91.5%) rotate(-30deg);
+        transform: translateX(91%) rotate(-30deg);
     }
 }
 
