@@ -1,6 +1,7 @@
 #projects {
     position: relative;
     padding-top: 1em;
+    overflow: hidden;
     background-color: var(--dark-color);
 }
 #projects h1 {
@@ -27,7 +28,7 @@
     margin: 0;
     overflow: hidden;
 
-    background-color: rgb(38, 38, 43, 0.2);
+    background-color: rgb(38, 38, 43, 0.8);
     border-radius: var(--radius);
 
     box-shadow: inset 0 0 0px 2px var(--black-color);
@@ -43,34 +44,35 @@
     position: relative;
     width: 27vh;
     height: 27vh;
-    margin: auto;
-    margin-bottom: 2vh;
+    margin: auto auto 2vh auto;
 }
 #showcase > .item > .slide > div > h2 {
     position: absolute;
     top: 13.5vh;
     left: 50%;
+    transform: translate(-50%, -50%);
     margin: 0;
     padding: 10px;
     font-size: 40px;
     z-index: 1;
     border-radius: var(--radius);
-    box-shadow: inset 0 0 10px 0 var(--black-color);
-    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 10px 2px var(--black-color);
+    background-color: rgb(64, 64, 75, 0.2);
+    color: white;
 }
 #showcase > .item > .slide > div > img {
     position: relative;
     display: inline-block;
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     left: 0;
     border-radius: var(--radius);
-    opacity: 0.2;
+    opacity: 0.5;
 }
 #showcase > .item > .slide > p {
     position: relative;
     text-align: left;
-    font-size: 20px;
+    font-size: 19px;
     width: 90%;
     left: 5%;
 }

@@ -1,6 +1,7 @@
 :root {
     --black-color: rgb(20, 20, 20); 
     --dark-color: rgb(38, 38, 43);
+    --dark-grey-color: rgb(64, 64, 75);
     --hint-color: rgb(128, 128, 128);
     --mid-color: rgb(180, 180, 180);
     --bright-color: rgb(230, 230, 230);
@@ -62,31 +63,30 @@ body {
 #front > .background {
     background-color: var(--dark-color);
 }
-#name {
+#bio {
     position: relative;
-    top: 30pt;
-    left: 30pt;
+    top: 10%;
+    left: 5%;
     width: 70%;
-    height: 34vh;
 }
-#name h1 {
+#bio h1 {
     margin: 0;
     font-size: 80px;
     color: white;
 }
-#name p {
-    margin: 0;
-    padding: 1em 0 0 0;
+#bio p {
+    margin: 1em 0 0 0;
     font-size: 30px;
 }
 
 #contact {
     position: absolute;
-    top: 30pt;
-    right: 30pt;
+    top: 10%;
+    right: 5%;
     text-align: center;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: start;
     row-gap: 30px;
     margin: 0;
@@ -94,14 +94,14 @@ body {
 #contact > a {
     align-self: center;
     display: inline-block;
-    width: 6vmin;
-    height: 6vmin;
-    flex: 0 0 6vmin;
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
     margin: 0;
     padding: 15px;
     border-radius: var(--radius);
     box-shadow: inset 2px 2px 8px 0px var(--mono-dark-color);
-    background-color: rgba(38, 38, 43, 0.2);
+    background-color: rgba(38, 38, 43, 0);
     font-size: 28px;
     color: white;
     text-decoration: none;
@@ -112,7 +112,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.8;
     transition: opacity 0.3s;
 }
 
@@ -130,7 +130,7 @@ body {
 #arrow {
     position: absolute;
     width: 20vw;
-    height: 20%;
+    height: 20vh;
     bottom: 1vh;
     left: 50%;
     transform: translateX(-50%);
@@ -160,7 +160,24 @@ body {
 #arrow .arrow > .right {
     transform: translateX(96%) rotate(0deg);
 }
+#arrow .arrow > div {
+    animation: wave_arrow 1s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-play-state: running; 
+}
+#arrow > :last-child > div {
+    animation-delay: 0.3s;
+}
 
+@keyframes wave_arrow {
+    0% {
+        background-color: var(--dark-grey-color);
+    }
+    100% {
+        background-color: var(--mid-color);
+    }
+}
 @media (hover: hover) and (pointer: fine) {
     #arrow:hover .left {
         transform: translateX(9%) rotate(30deg);
@@ -174,27 +191,47 @@ body {
 #main {
     position: relative;
     width: 100%;
-    /* height: 100vh; */
+    min-height: 500px;
     overflow: hidden;
+    padding-top: 1em;
 }
 #main > .background {
     background: linear-gradient(#e7ccbd, var(--bright-color));
     /* background-color: var(--bright-color); */
 }
 #main > .bgVideo {
-    position: relative;
+    position: absolute;
+    top: 0;
     min-width: 100%;
     z-index: -10;
 }
-#main > h1 {
+#main > footer {
     position: absolute;
-    top: 250px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    color: white;
+    margin-top: 0em;
+    padding: 1em;
+    bottom: 0;
+    right: 0;
+    font-size: 18px;
+    text-align: right;
+    color: var(--hint-color);
+}
+#main > section {
+    position: relative;
+    /* top: 0; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    color: var(--bright-color);
+}
+
+section.text > h1 {
     padding: 0;
     margin: 0;
+    font-size: 80px;
+    color: white;
+}
+section.text > p {
+    margin: 1em 0 0 0;
+    font-size: 30px;
 }
 
 
@@ -224,22 +261,4 @@ a.inline {
     margin: 0;
     padding: auto;
     border-radius: 5px;
-}
-
-footer {
-    position: relative;
-    margin-top: 0em;
-    padding: 1em;
-    bottom: 0;
-    right: 0;
-    font-size: 18px;
-    text-align: right;
-    color: var(--mid-color);
-}
-hr {
-    width: 100%;
-    height: 5px;
-    background-color: var(--secondary-color);
-    border: none;
-    margin: 0;
 }
