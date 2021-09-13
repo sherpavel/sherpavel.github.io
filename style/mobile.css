@@ -46,15 +46,6 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-    /* #contact {
-        position: relative;
-        right: auto;
-        float: right;
-        top: 15vh;
-        margin-right: 10vw;
-        display: flex;
-        justify-content: space-evenly;
-    } */
     #contact > a {
         width: 15vw;
         height: 15vw;
