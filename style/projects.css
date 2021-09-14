@@ -1,8 +1,18 @@
 #projects {
     position: relative;
+    min-height: 500px;
     padding-top: 1em;
     overflow: hidden;
+}
+#projects > .background{
     background-color: var(--dark-color);
+}
+#projects > .bgVideo {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -10;
 }
 #projects h1 {
     position: relative;
@@ -28,10 +38,10 @@
     margin: 0;
     overflow: hidden;
 
-    background-color: rgb(38, 38, 43, 0.8);
+    /* background-color: rgb(38, 38, 43, 0.2); */
     border-radius: var(--radius);
 
-    box-shadow: inset 0 0 0px 2px var(--black-color);
+    box-shadow: inset 0 0 0px 0px var(--black-color);
     cursor: pointer;
     transition: box-shadow 0.3s;
 }
@@ -57,7 +67,7 @@
     z-index: 1;
     border-radius: var(--radius);
     box-shadow: inset 0 0 10px 2px var(--black-color);
-    background-color: rgb(64, 64, 75, 0.2);
+    background-color: rgb(64, 64, 75, 0.8);
     color: white;
 }
 #showcase > .item > .slide > div > img {
@@ -67,7 +77,7 @@
     height: 100%;
     left: 0;
     border-radius: var(--radius);
-    opacity: 0.5;
+    opacity: 0.8;
 }
 #showcase > .item > .slide > p {
     position: relative;
@@ -79,6 +89,6 @@
 
 @media (hover: hover) and (pointer: fine) {
     #showcase > .item:hover {
-        box-shadow: inset 0 0 20px 2px var(--black-color);
+        box-shadow: inset 0 0px 10px 2px var(--black-color);
     }
 }

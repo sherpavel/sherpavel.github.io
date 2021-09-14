@@ -7,6 +7,9 @@ window.onresize = () => {
 window.onload = () => {
     isMobile = document.body.clientWidth < 700;
 
+    let bgVideos = document.getElementsByClassName("bgVideo");
+    Array.from(bgVideos).forEach(vid => vid.play());
+
     let showcase = document.getElementById("showcase");
     let showcaseItems = [];
     projects.forEach(item => {

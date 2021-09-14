@@ -13,7 +13,7 @@ const projects = [
     },
     {
         name: "Gradient",
-        img: "valley_new.png",
+        img: "grad_icon.png",
         text: "Gradient is a simple and intuitive preview tool for multi-color gradients. The website is mobile-friendly and has a multitude of sharing options that are useful for web and software developers.",
         link: "https://sherpavel.github.io/Gradient/"
     },
